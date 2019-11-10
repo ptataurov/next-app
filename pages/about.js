@@ -8,10 +8,8 @@ import Layout from '../components/Layout/Layout'
 const About = ({ title }) => {
   return (
     <>
-      <Layout>
-        <h1>About page</h1>
-        <h4>{title}</h4>
-      </Layout>
+      <h1>About page</h1>
+      <h4>{title}</h4>
     </>
   )
 }

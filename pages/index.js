@@ -7,9 +7,7 @@ import Layout from '../components/Layout/Layout'
 const IndexPage = () => {
   return (
     <>
-      <Layout>
-        <Counter />
-      </Layout>
+      <Counter />
     </>
   )
 }
