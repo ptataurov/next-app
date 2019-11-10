@@ -1,4 +1,3 @@
-import { withRouter } from 'next/router'
 import Link from 'next/link'
 import Head from 'next/head'
 
@@ -24,4 +23,4 @@ const Layout = ({ children, title = 'Default title' }) => {
   )
 }
 
-export default withRouter(Layout)
+export default Layout
