@@ -1,9 +1,11 @@
 import { withRedux } from '../lib/redux'
 import { startAbout } from '../store/actions/actions'
 
-import { connect } from 'react-redux'
+import { useSelector } from 'react-redux'
 
-const About = ({ title }) => {
+const About = () => {
+  const title = useSelector(state => state.title.title)
+
   return (
     <>
       <h1>About page</h1>
@@ -20,10 +22,4 @@ About.getInitialProps = ({ reduxStore }) => {
   return dispatch(startAbout())
 }
 
-const mapStateToProps = state => {
-  return {
-    title: state.title.title
-  }
-}
-
-export default withRedux(connect(mapStateToProps)(About))
+export default withRedux(About)

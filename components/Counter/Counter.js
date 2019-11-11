@@ -1,9 +1,14 @@
-import { connect } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { add, sub } from '../../store/actions/actions'
 
 import './Counter.scss'
 
-const Counter = ({ count, onAdd, onSub }) => {
+const Counter = () => {
+  const count = useSelector(state => state.counter.count)
+  const dispatch = useDispatch()
+  const onAdd = () => dispatch(add())
+  const onSub = () => dispatch(sub())
+
   return (
     <div>
       <h1>
@@ -15,17 +20,4 @@ const Counter = ({ count, onAdd, onSub }) => {
   )
 }
 
-const mapStateToProps = ({ counter }) => {
-  return {
-    count: counter.count
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    onAdd: () => dispatch(add()),
-    onSub: () => dispatch(sub())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+export default Counter
