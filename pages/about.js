@@ -1,9 +1,7 @@
 import { withRedux } from '../lib/redux'
-import { startAbout } from '../actions/actions'
+import { startAbout } from '../store/actions/actions'
 
 import { connect } from 'react-redux'
-import Link from 'next/link'
-import Layout from '../components/Layout/Layout'
 
 const About = ({ title }) => {
   return (

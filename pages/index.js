@@ -1,8 +1,6 @@
 import { withRedux } from '../lib/redux'
 import Counter from '../components/Counter/Counter'
-import Link from 'next/link'
-import { start } from '../actions/actions'
-import Layout from '../components/Layout/Layout'
+import { start } from '../store/actions/actions'
 
 const IndexPage = () => {
   return (

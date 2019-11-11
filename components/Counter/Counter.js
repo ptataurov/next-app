@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { add, sub } from '../../actions/actions'
+import { add, sub } from '../../store/actions/actions'
 
 import './Counter.scss'
 
@@ -28,7 +28,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Counter)
+export default connect(mapStateToProps, mapDispatchToProps)(Counter)
