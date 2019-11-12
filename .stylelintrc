@@ -1,8 +1,6 @@
 {
     "extends": ["stylelint-config-rational-order"],
-    "plugins": ["stylelint-prettier"],
     "rules": {
-      "prettier/prettier": true,
       "color-hex-case": "lower",
       "color-hex-length": "short",
       "declaration-empty-line-before": "never"
