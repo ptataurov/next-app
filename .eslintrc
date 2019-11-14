@@ -1,5 +1,6 @@
 {
   "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react-hooks"],
   "env": {
     "es6": true,
     "browser": true,
@@ -11,6 +12,8 @@
   },
   "parser": "babel-eslint",
   "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "indent": [
